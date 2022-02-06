@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="ja">
+    <title>OSPT VR</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+
+    <!--      
+        このように、statsを入れると、パフォーマンスのUIが表示される
+        <a-scene stats antialias="true" physics="debug: false;"> 
+    -->
+    <a-scene antialias="true" physics="debug: false;">
+
+        <a-assets>
+            <img id="title" src="./images/opst.jpg">
+        </a-assets>
+
+        <!--画像-->
+        <a-entity id="title">
+            <a-image src="#title" position="0 10 -50" rotation="180 180 180" scale="100 100 1"></a-image>
+        </a-entity>
+
+        <a-entity id="title">
+            <a-image src="#title" position="-50 10 0" rotation="180 -90 180" scale="100 100 1"></a-image>
+        </a-entity>
+
+        <a-entity id="camera" camera="userHeight: 1.6" position="0 5 0" look-controls>
+        </a-entity>
+
+        <a-entity light="type: ambient; color: #ddd"></a-entity>
+        <a-sky color="#191970"></a-sky>
+
+    </a-scene>
+</body>
+
+</html>
